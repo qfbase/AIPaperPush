@@ -1,0 +1,54 @@
+
+services:
+  rsshub:
+    image: diygod/rsshub
+    container_name: rsshub
+    restart: always
+    ports:
+      - "1205:1200"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.2'
+          memory: 256M
+
+  ai_paper_push:
+    build: .
+    container_name: ai_paper_push
+    depends_on:
+      - rsshub
+    env_file:
+      - .env
+    environment:
+      # 确保时区设置生效
+      - TZ=Asia/Shanghai
+      # Python缓冲区配置
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # 数据库目录持久化
+      - ./data:/app/data
+      # 日志文件持久化（可选）
+      - ./logs:/app/logs
+      # 关键词文件挂载
+      - ./keywords.txt:/app/keywords.txt:ro
+    restart: always
+    user: root
+    command: sh -c "mkdir -p /app/logs && mkdir -p /app/data && python fetch_and_push.py"
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.3'
+          memory: 512M
+    # 健康检查
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sqlite3; conn = sqlite3.connect('/app/data/papers.db'); conn.execute('SELECT 1'); conn.close()"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

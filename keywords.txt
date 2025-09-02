@@ -1,0 +1,43 @@
+LLM
+Transformer
+Diffusion
+Reinforcement Learning
+Neural Networks
+Deep Learning
+Attention Mechanism
+GPT
+BERT
+Robust AI
+Meta Learning
+Unsupervised Learning
+Supervised Learning
+Self-Supervised Learning
+Generative Models
+GAN
+VAE
+NLP
+Natural Language Processing
+Computer Vision
+Image Recognition
+Speech Recognition
+Multimodal AI
+Pretrained Models
+AI Ethics
+Explainable AI
+Zero-Shot Learning
+One-Shot Learning
+Recurrent Neural Networks
+Reinforcement Learning Agents
+Policy Gradient
+Q-learning
+Actor-Critic
+Deep Q Networks
+Transformers for NLP
+SOTA (State of the Art)
+Transfer Learning
+Contrastive Learning
+Few-Shot Learning
+Hyperparameter Optimization
+AI Fairness
+AI Safety
+
