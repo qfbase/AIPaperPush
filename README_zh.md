@@ -49,8 +49,8 @@
 
 1. **克隆项目**
    ```bash
-   git clone <repository-url>
-   cd 邮件推送
+   git clone https://github.com/qfbase/AIPaperPush/tree/main
+   cd AIPaperPush
    ```
 
 2. **配置环境变量**
