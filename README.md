@@ -49,8 +49,8 @@ This system aims to help researchers and scholars stay up-to-date with the lates
 
 1. **Clone the Project**
    ```bash
-   git clone <repository-url>
-   cd ai-paper-push
+   git clone https://github.com/qfbase/AIPaperPush
+   cd AIPaperPush
    ```
 
 2. **Configure Environment Variables**
