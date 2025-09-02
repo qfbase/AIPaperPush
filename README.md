@@ -23,21 +23,21 @@ This system aims to help researchers and scholars stay up-to-date with the lates
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   RSS Sources   │───▶│  Article Filter  │───▶│   Batch Logic   │
+│   RSS Sources   │──▶│  Article Filter  │──▶│   Batch Logic   │
 │ (arXiv, Nature, │    │   (Keywords)     │    │ (Max 10/batch)  │
 │     OpenAI...)  │    │                  │    │                 │
 └─────────────────┘    └──────────────────┘    └─────────────────┘
                                                          │
                                                          ▼
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   AI Summary    │◀───│  Smart Routing   │───▶│ Traditional     │
+│   AI Summary    │◀──│  Smart Routing   │──▶│ Traditional     │
 │  (Doubao LLM)   │    │   (Fallback)     │    │ Summary Mode    │
 │                 │    │                  │    │                 │
 └─────────────────┘    └──────────────────┘    └─────────────────┘
          │                       │                       │
          ▼                       ▼                       ▼
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│  Email Notify   │◀───│   SQLite DB      │───▶│  Data Storage   │
+│  Email Notify   │◀──│   SQLite DB      │──▶│  Data Storage   │
 │ (Batch Send)    │    │ (Deduplication)  │    │   (Articles)    │
 │                 │    │ (Auto Repair)    │    │                 │
 └─────────────────┘    └──────────────────┘    └─────────────────┘
