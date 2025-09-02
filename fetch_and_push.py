@@ -159,7 +159,7 @@ class DatabaseConnection:
 
 logger.info(f"尝试连接数据库: {DB_PATH}")
 max_retries = 5
-retry_delay = 2  # 秒
+retry_delay = 2  
 retry_count = 0
 success = False
 while retry_count < max_retries and not success:
