@@ -188,12 +188,12 @@ The system automatically identifies article sources through the `get_feed_source
 ```python
 def get_feed_source(link):
     sources = {
-        'export.arxiv.org': 'arXiv',
-        'nature.com': 'Nature Machine Intelligence',
-        'openai.com': 'OpenAI',
-        'microsoft.com/en-us/research': 'Microsoft Research',
-        'aws.amazon.com/blogs/machine-learning': 'AWS Machine Learning',
-        'developer.nvidia.com': 'NVIDIA Developer'
+        'arxiv': 'arXiv',
+        'nature': 'Nature Machine Intelligence',
+        'openai': 'OpenAI',
+        'microsoft': 'Microsoft Research',
+        'aws': 'AWS Machine Learning',
+        'nvidia': 'NVIDIA Developer',
         # When adding new RSS sources, please add corresponding mapping here
         # 'example.com': 'Example Source Name'
     }
