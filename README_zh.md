@@ -188,12 +188,12 @@ RSS_FEEDS = [
 ```python
 def get_feed_source(link):
     sources = {
-        'export.arxiv.org': 'arXiv',
-        'nature.com': 'Nature Machine Intelligence',
-        'openai.com': 'OpenAI',
-        'microsoft.com/en-us/research': 'Microsoft Research',
-        'aws.amazon.com/blogs/machine-learning': 'AWS Machine Learning',
-        'developer.nvidia.com': 'NVIDIA Developer'
+        'arxiv': 'arXiv',
+        'nature': 'Nature Machine Intelligence',
+        'openai': 'OpenAI',
+        'microsoft': 'Microsoft Research',
+        'aws': 'AWS Machine Learning',
+        'nvidia': 'NVIDIA Developer',
         # 添加新RSS源时，请在此添加对应的映射关系
         # 'example.com': 'Example Source Name'
     }
