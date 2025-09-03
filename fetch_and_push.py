@@ -418,6 +418,8 @@ def call_doubao_llm_batch(articles_data, batch_num, total_batches):
         else:
             influence_desc = "前沿技术进展"
         
+        current_date = datetime.now().strftime("%Y.%-m.%-d")
+        
         system_prompt = f"""你是一个AI领域的专业分析师，擅长总结和分析AI相关的最新研究和技术动态。请根据提供的文章信息，完成以下任务：
 
 1. 生成邮件标题，格式必须为："AI前沿：‘这些文章中最具影响力的更新内容’"，其中"最具影响力的更新内容"部分要根据文章内容具体描述，如"{influence_desc}"等
@@ -425,7 +427,7 @@ def call_doubao_llm_batch(articles_data, batch_num, total_batches):
    - 开头的问候语和本期概述（第{batch_num}批，共{total_batches}批）
    - 逐一列出每篇文章的详细信息，包含：标题、来源、完整摘要、链接
    - 确保包含提供的所有文章，不能遗漏任何一篇
-   - 结尾提供整体总结，附上日期
+   - 结尾提供整体总结，并在最后一行写上："日期：{current_date}"
    - 邮件内容总长度控制在4500字符以内
 
 格式要求：
