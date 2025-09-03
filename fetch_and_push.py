@@ -211,7 +211,7 @@ def get_feed_source(link):
         'openai': 'OpenAI',
         'microsoft': 'Microsoft Research',
         'aws': 'AWS Machine Learning',
-        'nvidia': 'NVIDIA Developer'
+        'nvidia': 'NVIDIA Developer',
     }
     for keyword, name in sources.items():
         if keyword in link.lower():
